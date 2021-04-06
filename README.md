@@ -33,3 +33,5 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+PostgresSQL version is on `main` branch.
