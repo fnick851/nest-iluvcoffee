@@ -21,9 +21,17 @@ export class CoffeesService {
   ) {
     const databaseHost = this.configService.get<string>(
       'DATABASE_HOST',
-      'localhost', // fallback
+      'fallback-localhost', // fallback
     );
-    console.log('(coffees.service.ts) databaseHost is:', databaseHost);
+    const databaseHostFromConfigJS = this.configService.get(
+      'database.host',
+      'fallback-localhost',
+    );
+    console.log(
+      '(coffees.service.ts)',
+      { databaseHost },
+      { databaseHostFromConfigJS },
+    );
   }
 
   findAll(paginationQuery: PaginationQueryDto) {
