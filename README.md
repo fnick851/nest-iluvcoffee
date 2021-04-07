@@ -42,3 +42,5 @@ $ npm run test:cov
   1. create `ormconfig.js` file
   2. build the project
   3. run `npx typeorm migration:generate -n [migration_name]`
+
+- Use `.env` file to store environment variables.
