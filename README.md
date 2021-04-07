@@ -34,4 +34,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-PostgresSQL version is on `main` branch.
+- PostgresSQL version is on `main` branch.
+- To generate migration:
+
+  1. create `ormconfig.js` file
+  2. build the project
+  3. run `npx typeorm migration:generate -n [migration_name]`
