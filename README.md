@@ -34,6 +34,8 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Notes
+
 - PostgresSQL version is on `main` branch.
 - To generate migration:
 
