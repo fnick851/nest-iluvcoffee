@@ -1,6 +1,6 @@
 ## Description
 
-Tutorial project.
+This branch uses MongoDB.
 
 ## Installation
 
