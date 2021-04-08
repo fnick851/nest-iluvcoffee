@@ -14,7 +14,7 @@ import appConfig from './config/app.config';
     CoffeesModule,
     CoffeeRatingModule,
     ConfigModule.forRoot({
-      // envFilePath: ['.env', '.uat.env', '.production.env'],
+      // envFilePath: ['.env', '.dev.env', '.prod.env'],
       // ignoreEnvFile: true,
       validationSchema: Joi.object({
         DATABASE_HOST: Joi.required(),
