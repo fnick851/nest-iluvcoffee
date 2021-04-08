@@ -10,6 +10,7 @@ import {
   SetMetadata,
 } from '@nestjs/common';
 import { ApiForbiddenResponse, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Protocol } from 'src/common/decorators/protocol.decorator';
 import { Public } from 'src/common/decorators/public.decorator';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 import { ParseIntPipe } from 'src/common/pipes/parse-int.pipe';
@@ -27,8 +28,12 @@ export class CoffeesController {
   // @ApiResponse({ status: 403, description: 'Forbidden.' })
   @ApiForbiddenResponse({ description: 'Forbidden.' })
   @Get()
-  async findAll(@Query() paginationQuery: PaginationQueryDto) {
+  async findAll(
+    @Protocol() protocol: string,
+    @Query() paginationQuery: PaginationQueryDto,
+  ) {
     // await new Promise((resolve) => setTimeout(resolve, 5000)); // for testing timeout interceptor
+    console.log('Request protocol is:', protocol);
     return this.coffeesService.findAll(paginationQuery);
   }
 
