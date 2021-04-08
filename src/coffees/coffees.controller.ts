@@ -7,8 +7,10 @@ import {
   Patch,
   Post,
   Query,
+  SetMetadata,
 } from '@nestjs/common';
 import { ApiForbiddenResponse, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { Public } from 'src/common/decorators/public.decorator';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
@@ -19,6 +21,8 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
+  // @SetMetadata('isPublic', true)
+  @Public()
   // @ApiResponse({ status: 403, description: 'Forbidden.' })
   @ApiForbiddenResponse({ description: 'Forbidden.' })
   @Get()

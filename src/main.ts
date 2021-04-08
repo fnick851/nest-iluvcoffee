@@ -23,9 +23,6 @@ async function bootstrap() {
   // filters
   app.useGlobalFilters(new HttpExceptionFilter());
 
-  // guards
-  app.useGlobalGuards(new ApiKeyGuard());
-
   // swagger
   const options = new DocumentBuilder()
     .setTitle('iluvcoffee RESTful API')
