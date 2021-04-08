@@ -26,7 +26,8 @@ export class CoffeesController {
   // @ApiResponse({ status: 403, description: 'Forbidden.' })
   @ApiForbiddenResponse({ description: 'Forbidden.' })
   @Get()
-  findAll(@Query() paginationQuery: PaginationQueryDto) {
+  async findAll(@Query() paginationQuery: PaginationQueryDto) {
+    // await new Promise((resolve) => setTimeout(resolve, 5000)); // for testing timeout interceptor
     return this.coffeesService.findAll(paginationQuery);
   }
 
