@@ -1,6 +1,6 @@
 ## Description
 
-Tutorial project.
+Tutorial project with PostgresSQL.
 
 ## Installation
 
