@@ -3,6 +3,7 @@ version: '3'
 services:
   db:
     image: postgres
+    container_name: iluvcoffee_postgresql
     restart: always
     ports:
       - '5432:5432'
