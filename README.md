@@ -1,6 +1,6 @@
 ## Description
 
-Tutorial project.
+A starting point without any DB integration.
 
 ## Installation
 
