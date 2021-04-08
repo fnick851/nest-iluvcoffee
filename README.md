@@ -36,7 +36,8 @@ $ npm run test:cov
 
 ## Notes
 
-- PostgresSQL version is on `main` branch.
+- PostgresSQL version is on the `main` branch.
+- Spin up DB instance with `docker-compose -p [project_name] up --no-recreate -d`
 - To generate migration:
 
   1. create `ormconfig.js` file
